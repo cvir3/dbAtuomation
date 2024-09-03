@@ -2,6 +2,7 @@ package Test;
 
 import Utilities.DBConfig;
 import Utilities.ReportManager;
+import Functions.Op_Dbcount;
 
 import java.sql.*;
 
@@ -11,8 +12,7 @@ public class Test_CDC {
         String connectionUrl = DBConfig.getConnectionUrl();
         ReportManager reportManager = new ReportManager();
         reportManager.startTest("Test_CDC");
-        Test_DBCount dbCount = new Test_DBCount();
-        dbCount.testDbCount(reportManager);
+        new Op_Dbcount().testDbCount(reportManager);
 
 
         // SQL Query

@@ -6,9 +6,10 @@ import Utilities.ReportManager;
 import java.sql.*;
 
 public class Op_CDCReport {
-    public void cdcReport(ReportManager reportManager) {
+    public void cdcReport(ReportManager reportManager) throws InterruptedException {
         String connectionUrl = DBConfig.getConnectionUrl();
         String sqlQuery = "select * from cdc.dbo_Users_2023_CT";
+        Thread.sleep(3000);
 
         try (Connection conn = DriverManager.getConnection(connectionUrl);
              Statement stmt = conn.createStatement();

@@ -1,7 +1,7 @@
-# dbAtuomation
+# SQL Database Atuomation
 This repository for Automate SQL database operations using Selenium and Java
 
-1. Created CRUD Operation
-2. Created Randomdata
-3. Database Count from the DB
-4. CDC automation
+1. CRUD Operation
+2. Created script for Randomdata with HTML report
+3. Database Count from the DB with HTML report
+4. CDC automation with HTML report
