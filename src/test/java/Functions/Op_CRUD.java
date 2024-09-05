@@ -18,13 +18,13 @@ public class Op_CRUD {
             stmt = conn.createStatement();
 
             // Insert operation
-            String insertSql = "INSERT INTO Users_2023 (UserID, first_name, last_name, email, gender, mobile_number) VALUES (13, 'Viren3', 'Automationtester', 'vir@yopmail.com', 'male', '9898098983')";
+            String insertSql = "INSERT INTO Users_2023 (UserID, first_name, last_name, email, gender, mobile_number) VALUES (14, 'Viren4', 'Automationtester', 'vir@yopmail.com', 'male', '9898098983')";
             int insertRows = stmt.executeUpdate(insertSql);
             System.out.println("Insert operation executed, Rows affected: " + insertRows);
             reportManager.logInfo("Successfully inserted new entry.");
 
             // Check if the record exists
-            String checkSql = "SELECT * FROM Users_2023 WHERE UserID = 13";
+            String checkSql = "SELECT * FROM Users_2023 WHERE UserID = 14";
             rs = stmt.executeQuery(checkSql);
 
             if (rs.next()) {
@@ -32,19 +32,19 @@ public class Op_CRUD {
                 System.out.println("Record found: UserID = " + rs.getInt("UserID") + ", first_Name = " + rs.getString("first_Name"));
 
                 // Update operation
-                String updateSql = "UPDATE Users_2023 SET first_name = 'TestUser3' WHERE UserID = 13";
+                String updateSql = "UPDATE Users_2023 SET first_name = 'TestUser4' WHERE UserID = 14";
                 int updateRows = stmt.executeUpdate(updateSql);
                 System.out.println("Update operation executed, Rows affected: " + updateRows);
                 reportManager.logInfo("Successfully updated.");
 
                 // Delete operation
-//                String deleteSql = "DELETE FROM Users_2023 WHERE UserID = 14";
-//                int deleteRows = stmt.executeUpdate(deleteSql);
-//                System.out.println("Delete operation executed, Rows affected: " + deleteRows);
-//                reportManager.logInfo("Successfully deleted entry.");
+                String deleteSql = "DELETE FROM Users_2023 WHERE UserID = 14";
+                int deleteRows = stmt.executeUpdate(deleteSql);
+                System.out.println("Delete operation executed, Rows affected: " + deleteRows);
+                reportManager.logInfo("Successfully deleted entry.");
             } else {
-                System.out.println("No record found with UserID = 13. Insert operation failed.");
-                reportManager.logInfo("No record found with UserID = 13.");
+                System.out.println("No record found with UserID = 14. Insert operation failed.");
+                reportManager.logInfo("No record found with UserID = 14.");
             }
 
             reportManager.logPass("CRUD operations completed successfully.");
