@@ -7,11 +7,11 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Op_Database {
+public class Op_RandomDB {
     private final Connection connection;
     private final Statement statement;
 
-    public Op_Database(String connectionUrl) throws SQLException, ClassNotFoundException {
+    public Op_RandomDB(String connectionUrl) throws SQLException, ClassNotFoundException {
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
         this.connection = DriverManager.getConnection(connectionUrl);
         this.statement = connection.createStatement();

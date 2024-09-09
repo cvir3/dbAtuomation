@@ -22,11 +22,9 @@ public class ReportManager {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd_MMM_yyyy-hh_mm_ss_a");
         String timestamp = now.format(formatter);
 
-        // ExtentSparkReporter with a timestamped
         String reportPath = "reports/html/DBTestReport_" + timestamp + ".html";
         ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
 
-        // report title and document name
         sparkReporter.config().setReportName("Database Testing Report");
         sparkReporter.config().setDocumentTitle("Database Test Results");
         sparkReporter.config().setTheme(Theme.STANDARD);
@@ -61,6 +59,10 @@ public class ReportManager {
         if (test != null) {
             test.log(Status.INFO, message);
         }
+    }
+    public void logTable(String tableName, String tableData) {
+        test.info("Table: " + tableName);
+        test.info("<table border='1'>" + tableData + "</table>");
     }
 
     public void flush() {

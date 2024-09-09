@@ -1,21 +1,21 @@
 package Test;
 
-import Functions.Op_Database;
+import Functions.Op_RandomDB;
 import Utilities.DBConfig;
 import Utilities.ReportManager;
 
 import java.sql.SQLException;
 
-public class Test_Execution {
+public class Test_RandomDb {
     public static void main(String[] args) {
         String connectionUrl = DBConfig.getConnectionUrl();
         //String connectionUrl = "jdbc:sqlserver://CPC-Viren-9E0N7;DatabaseName=tpcxbb_1gb;user=sa;password=Test@1234;encrypt=true;trustServerCertificate=true;";
 
         ReportManager reportManager = new ReportManager();
-        Op_Database dbOps = null;
+        Op_RandomDB dbOps = null;
 
         try {
-            dbOps = new Op_Database(connectionUrl);
+            dbOps = new Op_RandomDB(connectionUrl);
             reportManager.startTest("Database Table Creation and Data Insertion Test");
 
             dbOps.createTable();

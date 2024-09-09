@@ -5,8 +5,7 @@ import Functions.Op_Dbcount;
 
 public class Test_DBCount {
 
-
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Test_DBCount testDbCount = new Test_DBCount();
         ReportManager reportManager = new ReportManager();
         testDbCount.testDbCount(reportManager);
@@ -17,5 +16,4 @@ public class Test_DBCount {
         new Op_Dbcount().testDbCount(reportManager);
         reportManager.flush();
     }
-
 }

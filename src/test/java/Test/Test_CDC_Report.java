@@ -7,9 +7,9 @@ public class Test_CDC_Report {
 
     public static void main(String[] args) throws InterruptedException {
 
-        Test_CDC_Report testCdcReport = new Test_CDC_Report();
+        Test_CDC_Report tcr = new Test_CDC_Report();
         ReportManager reportManager = new ReportManager();
-        testCdcReport.testCDCReport(reportManager);
+        tcr.testCDCReport(reportManager);
     }
 
     public void testCDCReport(ReportManager reportManager) throws InterruptedException {
