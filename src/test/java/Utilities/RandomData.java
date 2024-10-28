@@ -12,14 +12,12 @@ public class RandomData {
     }
 
     public static String generateRandomMobileNumber() {
-            // Assuming Indian mobile numbers start with 7, 8, or 9 and are 10 digits long
-            StringBuilder mobileNumber = new StringBuilder();
-            mobileNumber.append((int)(Math.random() * 3) + 7); // Start with 7, 8, or 9
-            for (int i = 0; i < 9; i++) {
-                mobileNumber.append((int)(Math.random() * 10)); // Add remaining 9 digits
-            }
-            return mobileNumber.toString();
+        StringBuilder mobileNumber = new StringBuilder();
+        mobileNumber.append((int) (Math.random() * 3) + 7); // Start with 7, 8, or 9
+        for (int i = 0; i < 9; i++) {
+            mobileNumber.append((int) (Math.random() * 10)); // Add remaining 9 digits
         }
-
+        return mobileNumber.toString();
+    }
 
 }

@@ -1,4 +1,4 @@
-package Functions;
+package Functions.LocalDb;
 
 import Utilities.DBConfig;
 import Utilities.ReportManager;
@@ -81,5 +81,7 @@ public class Op_Dbcount {
         } finally {
             reportManager.flush();
         }
+
     }
+
 }

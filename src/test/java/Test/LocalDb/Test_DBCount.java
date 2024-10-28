@@ -1,7 +1,7 @@
-package Test;
+package Test.LocalDb;
 
 import Utilities.ReportManager;
-import Functions.Op_Dbcount;
+import Functions.LocalDb.Op_Dbcount;
 
 public class Test_DBCount {
 

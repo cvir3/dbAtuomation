@@ -1,7 +1,7 @@
-package Test;
+package Test.LocalDb;
 
 import Utilities.ReportManager;
-import Functions.Op_JsonCom;
+import Functions.LocalDb.Op_JsonCom;
 
 public class Test_JsonCompairson {
 

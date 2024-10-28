@@ -38,3 +38,12 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+#Reports
+.reports
+/reports/
+/reports/*
+
+# Ignore the entire resources directory
+/src/main/resources/*
+/src/main/resources/dbconfig.properties

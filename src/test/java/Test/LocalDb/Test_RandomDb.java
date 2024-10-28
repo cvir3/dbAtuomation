@@ -1,6 +1,6 @@
-package Test;
+package Test.LocalDb;
 
-import Functions.Op_RandomDB;
+import Functions.Op_RandomData_PF1103;
 import Utilities.DBConfig;
 import Utilities.ReportManager;
 
@@ -12,17 +12,15 @@ public class Test_RandomDb {
         //String connectionUrl = "jdbc:sqlserver://CPC-Viren-9E0N7;DatabaseName=tpcxbb_1gb;user=sa;password=Test@1234;encrypt=true;trustServerCertificate=true;";
 
         ReportManager reportManager = new ReportManager();
-        Op_RandomDB dbOps = null;
+        Op_RandomData_PF1103 dbOps = null;
 
         try {
-            dbOps = new Op_RandomDB(connectionUrl);
-            reportManager.startTest("Database Table Creation and Data Insertion Test");
+            dbOps = new Op_RandomData_PF1103(connectionUrl);
+            reportManager.startTest("Database Table Creation and Insertion In Local DB");
 
-            dbOps.createTable();
-            reportManager.logPass("Table created successfully.");
-
-            dbOps.insertRandomData(10);
+            dbOps.insertPF1103(200);
             reportManager.logPass("Random data inserted successfully.");
+            reportManager.logInfo("Database created and inserted into local database.");
 
         } catch (SQLException | ClassNotFoundException e) {
             reportManager.logFail("Error during database operation: " + e.getMessage());

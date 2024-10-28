@@ -1,4 +1,4 @@
-package Functions;
+package Functions.LocalDb;
 
 import Utilities.RandomData;
 
@@ -18,7 +18,7 @@ public class Op_RandomDB {
     }
 
     public void createTable() throws SQLException {
-        String createTableSQL = "CREATE TABLE RandomData21 ("
+        String createTableSQL = "CREATE TABLE RandomData1 ("
                 + "id INT PRIMARY KEY IDENTITY(1,1),"
                 + "first_name VARCHAR(50),"
                 + "last_name VARCHAR(50),"
@@ -36,7 +36,7 @@ public class Op_RandomDB {
             String gender = (Math.random() < 0.5) ? "Male" : "Female";
             String mobileNumber = RandomData.generateRandomMobileNumber();
 
-            String insertSQL = String.format("INSERT INTO RandomData21 (first_name, last_name, email, gender, mobile_number) "
+            String insertSQL = String.format("INSERT INTO RandomData1 (first_name, last_name, email, gender, mobile_number) "
                     + "VALUES ('%s', '%s', '%s', '%s', '%s');", firstName, lastName, email, gender, mobileNumber);
             statement.execute(insertSQL);
         }

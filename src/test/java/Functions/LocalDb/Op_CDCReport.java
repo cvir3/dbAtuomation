@@ -1,4 +1,4 @@
-package Functions;
+package Functions.LocalDb;
 
 import Utilities.DBConfig;
 import Utilities.ReportManager;

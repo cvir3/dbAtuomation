@@ -1,7 +1,7 @@
-package Test;
+package Test.LocalDb;
 
 import Utilities.ReportManager;
-import Functions.Op_CDCReport;
+import Functions.LocalDb.Op_CDCReport;
 
 public class Test_CDC_Report {
 
