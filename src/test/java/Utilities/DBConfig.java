@@ -14,7 +14,7 @@ public class DBConfig {
                 throw new RuntimeException("Unable to find dbconfig.properties");
             }
             prop.load(input);
-            connectionUrl = prop.getProperty("connection.url");
+            connectionUrl = prop.getProperty("localconnection.url");
             if (connectionUrl == null || connectionUrl.isEmpty()) {
                 throw new RuntimeException("Connection URL is not specified in dbconfig.properties");
             }
